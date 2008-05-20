@@ -2,14 +2,14 @@
 require_once "runner.class.php";
 
 class CJB extends IPRunner {
-	private $path = "http://www.cjb.net/cgi-bin/dynip.cgi";
+	protected $path = "http://www.cjb.net/cgi-bin/dynip.cgi";
 	
 	public function identifier() {
 		return "{$this->username}.cjb.net";
 	}
 	
-	public function update() {
-		$response = file_get_contents($this->path . $this->formatParams(array(
+	public function _update($ip) {
+		$response = @file_get_contents($this->path . $this->formatParams(array(
 			'username' => $this->username,
 			'password' => $this->password
 		)));

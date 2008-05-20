@@ -4,12 +4,14 @@ Class IPPool {
 	const ERROR_NOIP = 1001;
 	const ERROR_WARN = 1002;
 	const ERROR_CRED = 1003;
+	const ERROR_REQS = 1004;
 	
 	private $messages = array(
 		self::ERROR_NONE => "%s updated.",
 		self::ERROR_NOIP => "Could not determine your IP!",
 		self::ERROR_WARN => "%s was not updated!",
 		self::ERROR_CRED => "%s has the incorrect credentials!",
+		self::ERROR_REQS => "%s is not set up properly!",
 		'HEAD' => "Updating %d %s to %s:",
 		'SAME' => "IP hasn't changed since last check."
 	);
@@ -85,7 +87,7 @@ Class IPPool {
 		
 			foreach($this->runners AS $runner) {
 				$name = $runner->identifier();
-				$response = $runner->update();
+				$response = $runner->update($this->ip);
 				$this->writeLog($response, array($name));
 			}
 		}
