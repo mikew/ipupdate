@@ -18,7 +18,7 @@ Class IPPool {
 	const LOG_FILE = "./error.log";
 	
 	private $runners;
-	protected $ip;
+	private $ip;
 	
 	public function __construct() {
 		$this->runners = new ArrayObject();
@@ -49,8 +49,7 @@ Class IPPool {
 
 		if(!empty($ip)) {
 			if($ip != $this->ip) {
-				$this->setIP($ip);
-				return $ip;
+				return $this->setIP($ip);
 			} else {
 				$this->writeLog('SAME');
 				return self::ERROR_NONE;

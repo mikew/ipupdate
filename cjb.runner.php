@@ -4,11 +4,6 @@ require_once "runner.class.php";
 class CJB extends IPRunner {
 	private $path = "http://www.cjb.net/cgi-bin/dynip.cgi";
 	
-	// public function __construct($username, $password) {
-	// 	$this->params['username'] = $username;
-	// 	$this->params['password'] = $password;
-	// }
-	
 	public function identifier() {
 		return "{$this->username}.cjb.net";
 	}
