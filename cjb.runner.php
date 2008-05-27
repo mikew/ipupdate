@@ -27,4 +27,3 @@ class CJB extends IPRunner {
 		return IPPool::ERROR_WARN;
 	}
 }
-?>

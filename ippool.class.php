@@ -93,4 +93,3 @@ Class IPPool {
 		}
 	}
 }
-?>
