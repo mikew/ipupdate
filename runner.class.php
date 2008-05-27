@@ -28,6 +28,10 @@ Abstract Class IPRunner {
 		return '?' . implode('&', $tmp);
 	}
 	
+	protected function getURL($params = array()) {
+		return $this->path . $this->formatParams($params);
+	}
+	
 	public function update($ip) {
 		$errors = array();
 		
