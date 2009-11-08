@@ -5,4 +5,3 @@ ipupdate.php
 2. see usage in `config.php`
 3. cross your fingers
 4. run `php ipupdate.php`
-
