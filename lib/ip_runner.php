@@ -1,5 +1,5 @@
 <?php
-Abstract Class IPRunner {
+abstract class IPRunner {
 	abstract public function _update($ip);
 	abstract public function identifier();
 	

@@ -1,6 +1,4 @@
 <?php
-require_once "runner.class.php";
-
 class CJB extends IPRunner {
 	protected $path = "http://www.cjb.net/cgi-bin/dynip.cgi";
 	

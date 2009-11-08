@@ -1,0 +1,8 @@
+ipupdate.php
+============
+
+1. Move `config.example.php` to `config.php`
+2. see usage in `config.php`
+3. cross your fingers
+4. run `php ipupdate.php`
+

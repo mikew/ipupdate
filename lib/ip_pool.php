@@ -1,5 +1,5 @@
 <?php
-Class IPPool {
+class IPPool {
 	const ERROR_NONE = 1000;
 	const ERROR_NOIP = 1001;
 	const ERROR_WARN = 1002;
