@@ -47,7 +47,7 @@ class IPPool {
 	
 	public function checkIP() {
 		ini_set('user_agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.9) Gecko/20071025 Firefox/2.0.0.9');
-		$ip = @file_get_contents('http://www.whatismyip.org');
+		$ip = @file_get_contents('http://ip.appspot.com');
 
 		if(!empty($ip)) {
 			if($ip != $this->ip) {
