@@ -12,13 +12,14 @@ class ZoneEdit extends IPRunner {
 	public function _update($ip) {
     // $response = @file_get_contents($this->path . $this->formatParams());
     $response = @file_get_contents($this->getURL());
-
 		if($response === false || strpos($response, 'Authentication Failed') !== false) {
 			return IPPool::ERROR_CRED;
 		} elseif(strpos($response, 'has been updated') !== false) {
-      return IPPool::ERROR_NONE;
-    }
-    
+			return IPPool::ERROR_NONE;
+		} elseif(strpos($response, '201') !== false) {
+			return IPPool::ERROR_NONE;
+		}
+		
 		return IPPool::ERROR_WARN;
 	}
 }
